@@ -15,7 +15,7 @@ namespace RPG_project
             int[] bossStatystic = new int[4];
             for (int i = 0; i < bossStatystic.Length; i++)
             {
-                bossStatystic[i] = rnd.Next(40, 75);
+                bossStatystic[i] = rnd.Next(75, 99);
             }
             return bossStatystic;
         }
@@ -23,6 +23,7 @@ namespace RPG_project
         {
             Console.WriteLine("Spotykasz bossa");
             int[] boss = genrateBoss();
+            boss[0] = 100;
             while (boss[0] > 0)
             {
                 player[0] -= boss[1];
@@ -34,10 +35,12 @@ namespace RPG_project
 
                 }
                 Thread.Sleep(900);
-                Console.WriteLine($"Walka playerHp {player[0]} Boss zadaje ci {boss[1]} obr  = boss {player[0]} zadałeś {player[1]}");
+                Console.WriteLine($"Walka: playerHp = {player[0]} Boss zadaje ci {boss[1]} obr  => boss {player[0]} zadałeś {player[1]}");
+                
             }
             player[3] += 20000;
             return player;
+            
         }
 
     }
