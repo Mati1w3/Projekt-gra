@@ -39,6 +39,7 @@ namespace RPG_project
                 Console.WriteLine($"Walka playerHp {player[0]} dostjesz {monster[1]} obr = monster {player[0]} zadajesz {player[1]}");
             }
             player[3] += monster[3];
+            player[1] += 10;
             return player;
         }
 
