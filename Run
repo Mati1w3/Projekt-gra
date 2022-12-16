@@ -23,6 +23,10 @@ namespace RPG_project
                 string inp = Console.ReadLine().ToLower();
                 switch (inp)
                 {
+                    case "b":
+                        Console.WriteLine("Walka z bossem");
+                        Boss.faight2(character);
+                        break;
                     case "a":
                         Console.WriteLine("Walka");
                         Monsters.faight(character);
