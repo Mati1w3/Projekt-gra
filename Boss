@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace RPG_project
+{
+    internal class Boss
+    {
+        public static int[] genrateBoss()
+        {
+            Random rnd = new Random();
+            int[] bossStatystic = new int[4];
+            for (int i = 0; i < bossStatystic.Length; i++)
+            {
+                bossStatystic[i] = rnd.Next(40, 75);
+            }
+            return bossStatystic;
+        }
+        public static int[] faight2(int[] player)
+        {
+            Console.WriteLine("Spotykasz bossa");
+            int[] boss = genrateBoss();
+            while (boss[0] > 0)
+            {
+                player[0] -= boss[1];
+                boss[0] -= player[1];
+                if (player[0] <= 0)
+                {
+                    Console.WriteLine("Boss rozrywa cie na strzępy!!!");
+                    break;
+
+                }
+                Thread.Sleep(900);
+                Console.WriteLine($"Walka playerHp {player[0]} Boss zadaje ci {boss[1]} obr  = boss {player[0]} zadałeś {player[1]}");
+            }
+            player[3] += 20000;
+            return player;
+        }
+
+    }
+}
