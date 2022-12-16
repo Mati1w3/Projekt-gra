@@ -12,7 +12,7 @@ namespace RPG_project
         public static void informations(int[] charcer, int round)
         {
             Console.WriteLine($"------------------- round - {round} -------------------");
-            Console.WriteLine($"Twoje hp {charcer[0]} dmg {charcer[1]} mana {charcer[2]} kasa: {charcer[3]}$");
+            Console.WriteLine($"Twoje hp: {charcer[0]}, dmg: {charcer[1]}, mana: {charcer[2]}, kasa: {charcer[3]}$");
             Console.WriteLine($"a - Idź na przygodę! | b- rozpocznij walke z bossem!| s - spele |w - Sklep | r - cheats");
             Thread.Sleep(900); 
         }
