@@ -1,0 +1,78 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RPG_project
+{
+    public class Poddaj_się
+    {
+        public static int[] Mode(int[] character)
+        {
+            Console.WriteLine("Witaj w konsoli administratora");
+            Console.WriteLine("tutaj możesz zmieniać wszytkie wartości w grze");
+
+            Console.WriteLine("dodaj liczbe hp - a \t dodaj moc ataku - b \t dodaj liczbe many - c \t dodaj liczbe pieniędzy - d ");
+            string inp = Console.ReadLine();
+            if (inp == "a")
+            {
+                Console.WriteLine("Ile hp chcesz dodać:");
+                string x = Console.ReadLine();
+                int y = int.Parse(x);
+                character[0] += y;
+
+                Console.WriteLine($"dostajesz + {y}hp masz teraz {character[0]}hp");
+                
+                return character;
+
+            
+            }
+            if (inp == "b")
+            {
+                Console.WriteLine("Ile dmg chcesz dodać:");
+                string x = Console.ReadLine();
+                int y = int.Parse(x);
+                character[1] += y;
+
+                Console.WriteLine($"dostajesz + {y}dmg zadajesz teraz {character[1]}dmg");
+
+                return character;
+
+            }
+            if (inp == "c")
+            {
+                Console.WriteLine("Ile many chcesz dodać:");
+                string x = Console.ReadLine();
+                int y = int.Parse(x);
+                character[2] += y;
+
+                Console.WriteLine($"dostajesz + {y}many masz teraz {character[2]}many");
+
+                return character;
+
+            }
+            if (inp == "d")
+            {
+                Console.WriteLine("Ile $ chcesz dodać:");
+                string x = Console.ReadLine();
+                int y = int.Parse(x);
+                character[3] += y;
+
+                Console.WriteLine($"dostajesz + {y}$ zadajesz teraz {character[3]}$");
+
+                return character;
+
+            }
+            Console.WriteLine("Nie udało sie dodac parametrów");
+            return character;
+            
+            
+
+           
+
+
+
+        }
+    }
+}
